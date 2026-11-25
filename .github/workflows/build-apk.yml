@@ -22,11 +22,8 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Extract project
-        run: unzip -q ShadowSystem_MobileBuild.zip
+        run: unzip -o -q ShadowSystem_MobileBuild.zip
 
       - name: Build APK
         run: gradle -p ShadowSystemAndroid assembleDebug
